@@ -11,12 +11,16 @@ public class problema_a{
         for (int i = 0; i < n; i++) {
             float number = sc.nextFloat();
             al.add((float) Math.log(number));
+        }
+        for (int i = 0; i < al.size(); i++) {
             sum+=al.get(i);
         }
         float prom = sum/n;
-        float var = (float)(Math.pow(sum-prom,2)/(n-1));
+        float var=0;
+        for (int i = 0; i < al.size(); i++) {
+            var += (float)(Math.pow(al.get(i)-prom, 2) / (n-1));
+        }
         float desv_est = (float) Math.sqrt(var);
-
         float ln_vs = prom-2*desv_est;
         float ln_s = prom-desv_est;
         float ln_m = prom;
