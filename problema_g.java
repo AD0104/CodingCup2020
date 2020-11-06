@@ -15,29 +15,45 @@ public class problema_g {
         w2=sc.nextInt();
         h2=sc.nextInt();
 
-        //casos 3,5,7
-        if(x1 < x2){
+        //casos 7,8,10
+        if(x1 > x2){
+            if(y1 < y2){
+                System.out.println(7);
+                return;
+            }else if(y1 > y2){
+                System.out.println(8);
+                return;
+            }else if(y1 == y2){
+                System.out.println(2);
+                return;
+            }else{
+                System.out.println(10);
+                return;
+            }
+        // Casos 1,5,6
+        }else if (x1 < x2){
             if(y1 < y2){
                 System.out.println(5);
                 return;
-            }else if(y1 == y2){
-                System.out.println(3);
+            }else if(y1 > y2){
+                System.out.println(6);
                 return;
             }else{
-                System.out.println(7);
+                System.out.println(1);
                 return;
             }
-        }else if (x1 > x2){
+        // Casos 3,4
+        }else if(x1 == x2){
             if(y1 < y2){
-                System.out.println(5);
-                return;
-            }else if(y1 == y2){
                 System.out.println(3);
                 return;
             }else{
-                System.out.println(7);
+                System.out.println(4);
                 return;
             }
+        }else{
+            System.out.println(9);
+            return;
         }
     }
 }
