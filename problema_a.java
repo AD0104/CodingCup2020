@@ -15,7 +15,6 @@ public class problema_a {
         for (int i = 0; i < opciones.length; i++) {
             switch(opciones[i]){
                 case "N":
-                    movN(array);
                     break;
                 case "S":
                     break;
@@ -26,13 +25,4 @@ public class problema_a {
             }
         }
     }
-    public static void movN(int array[][]){
-        for (int i = array[0].length-1; i >= 0; i--) {
-            for (int j = array.length-1; j >= 0; j--) {
-                System.out.print(array[j][i]+" ");
-            }
-            System.out.println();
-        }
-    }
-    
 }
